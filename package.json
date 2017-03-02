@@ -1,0 +1,12 @@
+{
+  "name": "mailvelope_selenium",
+  "version": "0.0.1",
+  "license": "AGPL-3.0",
+  "homepage": "https://www.mailvelope.com/en/",
+  "dependencies": {
+    "protractor": "^5.1.1",
+    "fs": "^0.0.2"
+  },
+  "devDependencies": {
+  }
+}
