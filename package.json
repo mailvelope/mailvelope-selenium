@@ -5,8 +5,11 @@
   "homepage": "https://www.mailvelope.com/en/",
   "dependencies": {
     "protractor": "^5.1.1",
+    "webdriverio": "^4.6.2",
     "fs": "^0.0.2"
   },
   "devDependencies": {
+    "wdio-firefox-profile-service": "0.0.1",
+    "wdio-mocha-framework": "^0.5.8"
   }
 }

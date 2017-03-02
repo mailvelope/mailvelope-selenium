@@ -20,4 +20,8 @@ Firefox: ./node_modules/protractor/bin/protractor ./protractor/config/config-fir
 For Firefox, you will notice that the extension is not loading.
 
 ### Webdriverio
-TODO
+Status: Extension can load for both chrome and firefox.
+
+To run the demo test:
+Chrome: ./node_modules/.bin/wdio ./webdriverio/config/chrome.conf.js 
+Firefox: ./node_modules/.bin/wdio ./webdriverio/config/firefox.conf.js 
