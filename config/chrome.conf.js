@@ -1,3 +1,11 @@
+var fs = require('fs');
+
+function getChromeExtension(filename) {
+    var extension = fs.readFileSync(filename);
+    var base64 = new Buffer(extension).toString('base64');
+    return base64;
+};
+
 exports.config = {
     
     //
@@ -10,7 +18,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './webdriverio/tests/**/*.js'
+        './tests/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -33,6 +41,8 @@ exports.config = {
     // from the same test should run tests.
     //
     maxInstances: 10,
+    host: process.env.SELENIUM_SERVER_IP,
+    port: '4444',
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -44,12 +54,12 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'firefox'
+        browserName: 'chrome',
+        'chromeOptions': {
+            'extensions': [getChromeExtension('data/extensions/mailvelope.chrome.crx')]
+        }
     }],
     services: ['firefox-profile'],
-    firefoxProfile: {
-        extensions: ['data/extensions/mailvelope.firefox.xpi'],
-    },
     //
     // ===================
     // Test Configurations
@@ -122,7 +132,12 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    // reporters: ['dot'],
+    reporters: ['dot', 'junit'],
+    reporterOptions: {
+        junit: {
+            outputDir: '/var/www/logs'
+        }
+    },
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
