@@ -5,7 +5,8 @@
   "homepage": "https://www.mailvelope.com/en/",
   "dependencies": {
     "webdriverio": "^4.8.0",
-    "fs": "^0.0.2"
+    "fs": "^0.0.2",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "wdio-firefox-profile-service": "0.0.1",
