@@ -2,7 +2,7 @@ var assert = require('assert');
 var _ = require('underscore');
 
 var mailvelope = {
-  chromeBaseUrl : 'chrome-extension://ffgmdhmlbpemjfeejfgjidcpgmipkpen',
+  chromeBaseUrl : 'chrome-extension://mlgjlkghddakhilegfkhmioijdfmhlbp',
   firefoxBaseUrl: 'resource://jid1-aqqsmbyb0a8adg-at-jetpack/data'
 };
 
