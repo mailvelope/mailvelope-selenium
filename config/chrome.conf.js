@@ -135,7 +135,7 @@ exports.config = {
     reporters: ['dot', 'junit'],
     reporterOptions: {
         junit: {
-            outputDir: '/var/www/logs'
+            outputDir: '/var/www/logs/selenium'
         }
     },
     //
