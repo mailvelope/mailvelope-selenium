@@ -11,6 +11,8 @@ var mailvelope = {
  * @param string title
  */
 mailvelope.goToOptionsPage = function() {
+  browser.windowHandleMaximize();
+
   var baseUrl = '';
   if (browser.options.desiredCapabilities.browserName == 'firefox') {
     baseUrl = this.firefoxBaseUrl;
@@ -21,8 +23,9 @@ mailvelope.goToOptionsPage = function() {
 
   browser.url(baseUrl + '/app/app.html#keyring');
 
+  browser.waitForExist('.container');
   // Set focus on page.
-  browser.click('#settingsPanel');
+  browser.click('.container');
 };
 
 
