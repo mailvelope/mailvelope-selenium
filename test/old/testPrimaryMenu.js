@@ -1,5 +1,5 @@
 var assert = require('assert');
-var mailvelope = require('../../mailvelope/mailvelope');
+var mailvelope = require('../../lib/mailvelope');
 
 
 describe('As a user who want to use mailvelope with keyboard navigation', function() {

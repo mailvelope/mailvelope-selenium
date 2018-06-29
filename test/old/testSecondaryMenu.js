@@ -1,6 +1,6 @@
 var assert = require('assert');
-var mailvelope = require('../../mailvelope/mailvelope');
-var selectors = require('../../mailvelope/selectors');
+var mailvelope = require('../../lib/mailvelope');
+var selectors = require('../../lib/selectors');
 
 
 

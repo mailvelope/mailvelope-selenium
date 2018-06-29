@@ -1,16 +1,14 @@
 {
-  "name": "mailvelope_selenium",
-  "version": "0.0.1",
+  "name": "mailvelope-selenium",
+  "version": "0.0.2",
   "license": "AGPL-3.0",
   "homepage": "https://www.mailvelope.com/en/",
   "dependencies": {
-    "webdriverio": "^4.8.0",
-    "fs": "^0.0.2",
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {
-    "wdio-firefox-profile-service": "0.0.1",
-    "wdio-junit-reporter":  "^0.0.1",
-    "wdio-mocha-framework": "^0.5.8"
+    "chai": "^4.1.2",
+    "bootstrap4": "github:mailvelope/mailvelope#v4m",
+    "wdio-junit-reporter": "^0.4.3",
+    "wdio-mocha-framework": "^0.6.0",
+    "webdriverio": "^4.13.1",
+    "wdio-firefox-profile-service": "0.1.0"
   }
 }
